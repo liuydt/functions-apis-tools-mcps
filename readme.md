@@ -1,6 +1,6 @@
 # API vs MCP
 
-This project is to demon the differences among local functions, APIs and MCP.
+This project is to demon the differences among local function calls, API calls, local agent tools and MCP servers.
 
 ## General steps to create a new project
 
@@ -31,9 +31,6 @@ in your code, use the following to load environment viables defined in .env file
 
 5. (Optinal) Version control
 
-`git init .`
-
-
 ### Local function
 
 functions are defined in weather_station.py
@@ -51,6 +48,24 @@ in terminal, run `fastapi dev weather_station_api.py` to run APIs in API server.
 
 At this stage, APIs can be accessed in browser.
 
-We can also use code to access APIs. examples are in api_call.py
+We can also use code to access APIs. examples are in api_call.py.
 
 ### LLM with local tools.
+
+Tools are defined in weather_station_tools.py
+
+How to use tools are shown in local_tools.py
+
+For AI Agents, we don't need to explicitely call the function like in local functions or API calls.
+
+LLM will decide to call which tool(function).
+
+### LLM with MCP servers.
+
+We use FastMCP to create a local MCP server.
+
+How to use the tools provided by MCP server are shown in mcp_calling.py
+
+AI agent will find all the available tools provided by the MCP server.
+
+LLM will decide to call which tool(function).
