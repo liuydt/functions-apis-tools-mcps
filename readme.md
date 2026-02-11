@@ -64,6 +64,8 @@ LLM will decide to call which tool(function).
 
 We use FastMCP to create a local MCP server.
 
+we can start MCP server by running `python weather_station_mcp.py`.
+
 How to use the tools provided by MCP server are shown in mcp_calling.py
 
 AI agent will find all the available tools provided by the MCP server.
